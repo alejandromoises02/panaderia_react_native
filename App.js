@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading'
-
+import { Provider } from 'react-redux';
 import BreadNavigation from './navigation/BreadNavigation';
+import store from './store';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -14,7 +14,10 @@ export default function App() {
   if(!loaded) return <AppLoading />
 
   return (
-    <BreadNavigation />
+    <Provider store={store}>
+      <BreadNavigation />
+    </Provider>
+    
   );
 }
 
