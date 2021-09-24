@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading'
 import { Provider } from 'react-redux';
-import BreadNavigation from './navigation/BreadNavigation';
+import MainNavigator from './navigation';
 import store from './store';
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <BreadNavigation />
+      <MainNavigator />
     </Provider>
     
   );
