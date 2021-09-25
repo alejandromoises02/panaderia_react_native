@@ -2,9 +2,9 @@ import React from "react";
 import { FlatList, View, StyleSheet } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { FAB } from "react-native-elements";
-import GridItem from "../components/GridItem";
-import { selectCategory } from "../store/actions/category.actions";
-import { COLORS } from './../constants/colors'
+import GridItem from "../../components/GridItem";
+import { selectCategory } from "../../store/actions/category.actions";
+import { COLORS } from './../../constants/colors'
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 export default function CategoriesScreen({ navigation }) {

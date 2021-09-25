@@ -3,8 +3,8 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { FAB } from "react-native-elements";
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
-import { addItem } from "../store/actions/cart.actions";
-import { COLORS } from './../constants/colors'
+import { addItem } from "../../store/actions/cart.actions";
+import { COLORS } from './../../constants/colors'
 
 export default function BreadDetailScreen({ navigation }) {
   const breadID = useSelector((state) => state.breads.selectedID);

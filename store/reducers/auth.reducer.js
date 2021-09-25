@@ -1,4 +1,3 @@
-import AuthNavigator from "../../navigation/AuthNavigator";
 import { SIGNUP } from "../actions/auth.action";
 
 const INITIAL_STATE = {
@@ -19,4 +18,4 @@ const AuthReducer = (state = INITIAL_STATE, action) =>{
     }
 }
 
-export default AuthNavigator
+export default AuthReducer

@@ -14,16 +14,17 @@ export const removeItem = (id) =>({
     payload: id,
 });
 
-export const confirmCart = (payload) => {
+export const confirmCart = (payload, userId) => {
     return async dispatch => {
         try{
-            const response = await fetch(`${URL_API}/cart.json`,{
+            const response = await fetch(`${URL_API}/ordenes.json`,{
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
                 },
                 body: JSON.stringify({
                     date: Date.now(),
+                    userId,
                     items: {...payload},
                 })
             })

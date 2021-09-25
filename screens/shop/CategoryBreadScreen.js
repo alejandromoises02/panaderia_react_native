@@ -3,9 +3,9 @@ import { StyleSheet, FlatList, View } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { FAB } from "react-native-elements";
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
-import BreadItem from "../components/BreadItem";
-import { filterBread, selectBread } from "../store/actions/bread.actions";
-import { COLORS } from './../constants/colors'
+import BreadItem from "../../../components/BreadItem";
+import { filterBread, selectBread } from "../../../store/actions/bread.actions";
+import { COLORS } from '../../../constants/colors'
 
 export default function CategoryBreadScreen({ navigation }) {
   const dispatch = useDispatch();

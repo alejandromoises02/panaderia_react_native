@@ -3,12 +3,11 @@ import { Platform } from "react-native";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import CategoriesScreen from "../screens/CategoriesScreen";
-import BreadDetailScreen from "../screens/BreadDetailScreen";
-import CategoryBreadScreen from "../screens/CategoryBreadScreen";
-import CartScreen from "../screens/CartScreen";
+import CategoriesScreen from '../../screens/shop/CategoriesScreen'
+import BreadDetailScreen from "../../screens/shop/BreadDetailScreen";
+import CategoryBreadScreen from "../../screens/shop/CategoryBreadScreen";
 
-import { COLORS } from "./../constants/colors";
+import { COLORS } from "../../constants/colors";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,11 +42,6 @@ const BreadNavigation = () => (
         title: route.params.name
       })}
       component={BreadDetailScreen}
-    />
-    <Stack.Screen
-      name="Cart"
-      options={{ title: "Tu compra" }}
-      component={CartScreen}
     />
   </Stack.Navigator>
 );
